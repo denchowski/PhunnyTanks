@@ -9,6 +9,7 @@ List of current features:
 - turrets as enemies, which can target and shot down player;
 
 Features are on the way:
+- better UI, in main menu and in-game HUD
 - voxel destructible world;
 - different projectile types;
 - probably different firing system, something like hold&n&release
