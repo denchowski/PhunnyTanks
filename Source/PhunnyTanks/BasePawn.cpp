@@ -8,10 +8,8 @@
 #include "Projectile.h"
 #include "Particles/ParticleSystem.h"
 
-// Sets default values
 ABasePawn::ABasePawn()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
@@ -26,7 +24,6 @@ ABasePawn::ABasePawn()
 
 void ABasePawn::HandleDestruction()
 {
-	// TODO: VFX/SFX
 	OnDeathEvent();
 	if (DeathParticles)
 	{

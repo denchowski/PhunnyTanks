@@ -38,7 +38,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float TurnRate = 250.0f;
 
-	/* This will ensure that suspension targets SuspensionDistance * SuspensionPoint */
+	/* This will make suspension length equal SuspensionDistance * SuspensionPoint */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true", ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
 	float SuspensionPoint = 0.75;
 

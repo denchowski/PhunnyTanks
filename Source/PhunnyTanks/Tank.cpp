@@ -65,12 +65,6 @@ void ATank::Tick(float DeltaTime)
 	{
 		HandleSuspension(DeltaTime, RearRightWheel);
 	}
-
-	//if (!TankPlayerController)
-	//	return;
-	//FHitResult HitResult;
-	//TankPlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, false, HitResult);
-	//RotateTurret(HitResult.ImpactPoint);
 }
 
 void ATank::HandleDestruction()
