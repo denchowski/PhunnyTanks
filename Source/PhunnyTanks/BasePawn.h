@@ -26,6 +26,9 @@ protected:
 	UStaticMeshComponent* TurretMesh;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* BaseMesh;
+	
+	UFUNCTION(BlueprintImplementableEvent) 
+	void OnDeathEvent();
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))

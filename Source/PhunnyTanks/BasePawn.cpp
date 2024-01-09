@@ -27,6 +27,7 @@ ABasePawn::ABasePawn()
 void ABasePawn::HandleDestruction()
 {
 	// TODO: VFX/SFX
+	OnDeathEvent();
 	if (DeathParticles)
 	{
 		UGameplayStatics::SpawnEmitterAtLocation(
