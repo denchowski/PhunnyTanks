@@ -49,21 +49,9 @@ void ATank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (FrontLeftWheel != nullptr)
+	for (auto Wheel : Wheels)
 	{
-		HandleSuspension(DeltaTime, FrontLeftWheel);
-	}
-	if (FrontRightWheel != nullptr)
-	{
-		HandleSuspension(DeltaTime, FrontRightWheel);
-	}
-	if (RearLeftWheel != nullptr)
-	{
-		HandleSuspension(DeltaTime, RearLeftWheel);
-	}
-	if (RearRightWheel != nullptr)
-	{
-		HandleSuspension(DeltaTime, RearRightWheel);
+		HandleSuspension(DeltaTime, Wheel);
 	}
 }
 
@@ -204,7 +192,7 @@ void ATank::ChangeHeight(const FInputActionValue& Value)
 
 void ATank::ChangePitchRotation(const FInputActionValue& Value)
 {
-	BaseMesh->AddRelativeRotation({Value.Get<float>(), 0, 0});
+	SpringArm->AddLocalRotation({Value.Get<float>(), 0, 0}, false);
 }
 
 void ATank::ResetRotation()
